@@ -44,13 +44,13 @@ qbinom(x, size = size, prob = prob)
 
 successes <- 1
 attempts <- 2
-succes_prob <- 1/2
+succes_prob <- 1 / 2
 
 # Probability of AT MOST having this amount
 pbinom(successes, attempts, succes_prob)
 
 # Probability of having LESS successes
-1-pbinom(successes, attempts, succes_prob)
+1 - pbinom(successes, attempts, succes_prob)
 
 # Chance of EXACTLY the amount of successes
 dbinom(successes, attempts, succes_prob)

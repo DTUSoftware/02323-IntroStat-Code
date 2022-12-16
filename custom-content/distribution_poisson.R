@@ -12,6 +12,7 @@ lambda <- 3.5
 
 x <- 0
 
+# remember to use 1 - ..... if you want the chance of above something.
 
 # remember to use 1 - pois if you want something above a certain value, for example when you want the chance that two
 # or more people is gonna visit a website then you set x to 1 because you want more than 1 person and then do the
