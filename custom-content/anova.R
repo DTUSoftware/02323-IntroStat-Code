@@ -3,6 +3,7 @@ y <- c(1.89, 2.35, 1.68, 2.11, 3.15, 2.16, 2.40, 2.59, 1.54, 2.02, 2.01, 2.11)
 grp<-c(rep("1",4),rep("2",4),rep("3",4))
 fit <- lm(y~grp)
 anova(fit)
+# if you want SST just sum the sq
 
 # ---------------------
 #   From Hansen

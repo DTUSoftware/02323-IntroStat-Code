@@ -11,12 +11,12 @@ n = 0
 
 # 2. Calculate T_obs value & df
 
-t_obs = (x-mu)/(s/sqrt(n))
+t_obs = (x - mu) / (s / sqrt(n))
 df = n - 1
 
 # 3. Calculate p
 
-P <- 2*(1-pt(t_obs, df))
+P <- 2 * (1 - pt(t_obs, df))
 P
 
 # if P > 0.05 the hypothes is rejected
@@ -38,3 +38,9 @@ alpha <- 0.01
 prop.test(x, n, conf.level = 1 - alpha, correct = FALSE)
 
 t.test(x, n, conf.level = 1 - alpha)
+
+# To calculate the p - value from a t-obs and sample size
+t_obs <- 0.857
+# n is the sample size
+n <- 50
+2 * (1 - pt(t_obs,df = n-1))

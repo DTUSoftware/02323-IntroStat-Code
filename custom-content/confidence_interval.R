@@ -19,6 +19,8 @@ alpha <- (100-conf_interval)/100
 x - qt(1-alpha/2,n-1)*s/sqrt(n)
 x + qt(1-alpha/2,n-1)*s/sqrt(n)
 
+
+
 # 1. Insert Variables
 
 n <- 0                         # Number of Observations
