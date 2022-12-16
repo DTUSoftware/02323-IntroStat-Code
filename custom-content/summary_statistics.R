@@ -1,3 +1,12 @@
+# input the array
+x <- c(22.3, 11.8, 14.8, 13.4, 14.8, 15.9, 6.6, 9.6, 16.5)
+mean(x)
+median(x)
+var(x)
+sd(x)
+summary(x)
+
+
 ###########################################################################
 ## Read data into R
 
@@ -25,15 +34,15 @@ variables <- c("Q", "Ta", "G")
 
 # Summary Table
 Tbl <- apply(D_model[, variables], 2, function(x) {
-  c(
-    n = sum(!is.na(x)),                                   ## Total number of observations (doesn't include missing values if there are any)
-    mean = mean(x, na.rm = TRUE),                         ## Sample mean of daily heat consumption
-    var = var(x, na.rm = TRUE),                           ## Sample variance of daily heat consumption
-    sd = sd(x, na.rm = TRUE),                             ## Sample standard deviance
-    lq = unname(quantile(x, probs = 0.25, na.rm = TRUE)), ## Lower quartile, Q1
-    median = median(x, na.rm = TRUE),                     ## Median, Q2 (could also have used "quantile(x, probs=0.5, na.rm=TRUE)")
-    hq = unname(quantile(x, probs = 0.75, na.rm = TRUE))  ## Upper quartile, Q3
-  )
+    c(
+      n = sum(!is.na(x)),                                   ## Total number of observations (doesn't include missing values if there are any)
+      mean = mean(x, na.rm = TRUE),                         ## Sample mean of daily heat consumption
+      var = var(x, na.rm = TRUE),                           ## Sample variance of daily heat consumption
+      sd = sd(x, na.rm = TRUE),                             ## Sample standard deviance
+      lq = unname(quantile(x, probs = 0.25, na.rm = TRUE)), ## Lower quartile, Q1
+      median = median(x, na.rm = TRUE),                     ## Median, Q2 (could also have used "quantile(x, probs=0.5, na.rm=TRUE)")
+      hq = unname(quantile(x, probs = 0.75, na.rm = TRUE))  ## Upper quartile, Q3
+    )
 })
 Tbl
 
@@ -45,4 +54,4 @@ Tbl
 s <- 0
 n <- 0
 
-SE <- s/sqrt(n)
+SE <- s / sqrt(n)
