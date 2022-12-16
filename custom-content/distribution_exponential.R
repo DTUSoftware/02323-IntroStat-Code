@@ -8,6 +8,7 @@
 
 # remember to use 1 - ..... if you want the chance of above something.
 x <- 0
+# The rate (percent - 3% -> 0.03)
 rate <- 1 / 3
 
 # dexp is the density function of the exponential distribution. It calculates the probability density of a given value,
