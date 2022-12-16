@@ -28,7 +28,7 @@ n2 <- 2
 alpha <- 0.01
 
 # Calculate values
-df2d <- (3 - 1) * (2 - 1)
+df2d <- (n1 - 1) * (n2 - 1)
 
 # Calculate Result
 qchisq(1 - alpha, df2d)
