@@ -23,14 +23,15 @@ t.test(x, n, conf.level = 1 - alpha)
 
 # 1. Insert Values
 
-x = 0
-mu = 0
-s = 0
-n = 0
+x = 21.5
+mu = 23
+s = 9.8
+n = 56
 
 # 2. Calculate T_obs value & df
 
 t_obs = (x - mu) / (s / sqrt(n))
+t_obs
 df = n - 1
 
 # 3. Calculate p
