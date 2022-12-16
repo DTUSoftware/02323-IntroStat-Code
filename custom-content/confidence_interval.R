@@ -4,24 +4,22 @@
 
 data <- c(22.3, 11.8, 14.8, 13.4, 14.8, 15.9, 6.6, 9.6, 16.5)
 conf_interval <- 99.9
-alpha <- conf_interval/100
+alpha <- conf_interval / 100
 t.test(data, conf.level = alpha)
 
 # To do it from the standard deviation, sample mean and sample size
 # n is sample size
-n <- 50
+n <- 56
 # x is sample mean
-x <- 3505.7
+x <- 21.5
 # sample standard deviation is
-s <- 467.9
+s <- 9.8
 # the confidence interval thingy
 conf_interval <- 95
-alpha <- (100-conf_interval)/100
+alpha <- (100 - conf_interval) / 100
 
 # Calculate
-x - qt(1-alpha/2,n-1)*s/sqrt(n)
-x + qt(1-alpha/2,n-1)*s/sqrt(n)
-
+x + c(-1, 1) * qt(1 - alpha / 2, n - 1) * s / sqrt(n)
 
 
 # 1. Insert Variables
@@ -33,12 +31,12 @@ s <- 0                         # Standard Deviation
 # 2. Insert Variables
 
 alpha <- 0.05                   # Significane Value
-t <- qt(1 - alpha/2, n-1)     # T-value
+t <- qt(1 - alpha / 2, n - 1)     # T-value
 
 # 3. Calculate Interval
 
-x - t*s/sqrt(n)                # Lower value
-x + t*s/sqrt(n)                # Higher value
+x - t * s / sqrt(n)                # Lower value
+x + t * s / sqrt(n)                # Higher value
 
 # ---------------------
 #   From Hansen

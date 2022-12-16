@@ -4,12 +4,24 @@
 
 # 3) Power / sample size ----
 ### 1-sample power/ sample size ----
-#find power
-power.t.test(n = 50, delta = 4, sd = 12.21, sig.level = 0.05,
-             type = "one.sample")
-#find sample size
-power.t.test(power = 0.8, delta = 4, sd = 12.21, sig.level = 0.05,
-             type = "one.sample")
+# number of observasions
+n <- 30
+# true difference in means
+delta <- 5
+# variance
+v <- 16
+# stabdard devitation
+sd <- sqrt(v)
+# sig level
+alpha <- 0.01
+# power
+power <- 0.98
+# types
+type <- c("two.sample", "one.sample", "paired")
+# remove whatever you need to find for example if you need to find n remove n from below
+power.t.test(n = n, delta = delta, sd = sd, sig.level = alpha, power = power,
+             type = type[1])
+
 
 #1. metode
 alpha <- 0.05
