@@ -1,6 +1,6 @@
-# Manganese concentrations
+# x value
 x <- c(0, 0, 2, 2, 4, 4, 6, 6, 8, 8, 10, 10)
-# ICP-AES values
+# y values
 y <- c(114, 14, 870, 1141, 2087, 2212, 3353, 2633, 3970, 4299, 4950, 5207)
 
 # Wished x value

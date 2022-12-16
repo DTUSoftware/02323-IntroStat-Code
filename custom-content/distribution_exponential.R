@@ -7,7 +7,9 @@
 # a purchase, for example.
 
 # remember to use 1 - ..... if you want the chance of above something.
-x <- 0
+
+# whatever you want
+x <- 2
 # The rate (percent - 3% -> 0.03)
 rate <- 1 / 3
 

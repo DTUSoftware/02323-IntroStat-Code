@@ -8,10 +8,13 @@ s <- 0
 x <- 0
 alpha <- 0.01
 
+
 # Calculate values
+# 1d values
 df <- n - 1
 alpha_1 <- alpha / 2
 alpha_2 <- 1 - alpha_1
+# 2d
 n1 <- 3
 n2 <- 2
 alpha <- 0.01
