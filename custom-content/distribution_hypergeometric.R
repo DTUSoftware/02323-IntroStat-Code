@@ -1,3 +1,7 @@
+# -----------------------------------------------------------------------------
+#   HYPERGEOMETRIC DISTRIBUTION
+# -----------------------------------------------------------------------------
+
 # The hypergeometric distribution is a discrete probability distribution used to model the probability of a certain
 # number of successes in a sample drawn from a finite population without replacement. It is used in situations where
 # the probability of success is dependent on the number of successes and failures that have already occurred.

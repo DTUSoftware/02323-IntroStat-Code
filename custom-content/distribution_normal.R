@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-#   PNORM GUIDE
+#   NORMAL DISTRIBUTION
 # -----------------------------------------------------------------------------
 
 # Pnorm finds out what percentage of the values in the normal distribution that
@@ -17,11 +17,9 @@ q <- 0       # Quantile to check for
 pnorm(q, x, s)
 
 # What percent of the population has a lower value? (q > population)
-1-pnorm(q, x, s)
+1 - pnorm(q, x, s)
 
-# ------------------------------------------------------------------------------
-#   ROBOT OVERLORD
-# ------------------------------------------------------------------------------
+# ROBOT OVERLORD
 
 # Generate normal random variables
 normal_data <- rnorm(n = 100, mean = 0, sd = 1)

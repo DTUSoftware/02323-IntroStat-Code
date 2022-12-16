@@ -30,5 +30,3 @@ df2d <- (n1 - 1) * (n2 - 1)
 
 # Calculate Result
 qchisq(1 - alpha, df2d)
-
-

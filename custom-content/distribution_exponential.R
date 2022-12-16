@@ -1,3 +1,7 @@
+# -----------------------------------------------------------------------------
+#   EXPONENTIAL DISTRIBUION
+# -----------------------------------------------------------------------------
+
 # The exponential distribution is a continuous probability distribution used to model the time it takes for an event to
 # occur. It is often used to model the time between events in a Poisson process, which is a statistical process that
 # describes the occurrence of events at a constant average rate. The exponential distribution has a number of useful

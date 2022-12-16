@@ -1,12 +1,14 @@
-# ---------------------
-#   From Hansen
-# ---------------------
+# -----------------------------------------------------------------------------
+#   ERROR PROPAGATION
+# -----------------------------------------------------------------------------
+
+## Fra Hansen
 
 # 4) Error defining/Error propagation  ----
 ### Theoretical derivation ----
 rm(list = ls())
 # indsæt formel i{}:
-f <- function(x, y) { indsætformel}
+f <- function(x, y) { indsætformel }
 # indsæt formel:
 fd <- expression(indsæt formel)
 dx <- D(fd, 'x')
@@ -21,7 +23,7 @@ usikker_y <- 0.002
 #Indsæt dx og dy definitioner med tal i:
 dx
 dy
-sqrt((dx indsæt)^2*(usikker_x)^2+(dy indsæt)^2*(usikker_y)^2)
+sqrt((dx indsæt)^2 * (usikker_x)^2 + (dyindsæt)^2*(usikker_y)^2)
 
 ### Simulation ----
 set.seed(28973)

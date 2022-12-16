@@ -1,3 +1,7 @@
+# -----------------------------------------------------------------------------
+#   POISSON DISTRIBUTION
+# -----------------------------------------------------------------------------
+
 # In R, the dpois, ppois, qpois, and rpois functions are all related to the Poisson distribution.
 #
 # The Poisson distribution is a discrete probability distribution that expresses the probability of a given number of

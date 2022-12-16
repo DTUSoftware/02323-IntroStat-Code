@@ -38,9 +38,7 @@ t <- qt(1 - alpha / 2, n - 1)     # T-value
 x - t * s / sqrt(n)                # Lower value
 x + t * s / sqrt(n)                # Higher value
 
-# ---------------------
-#   From Hansen
-# ---------------------
+# ---- From Hansen ---------------------
 
 # 3) Konfidens Interval ----
 ### 1-sample mean ----
