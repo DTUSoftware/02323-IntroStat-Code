@@ -6,7 +6,18 @@ var(x)
 sd(x)
 summary(x)
 
-
+# estimate of standard error of the estimated proportion
+# the ammount thatare hits
+x <- 1801
+# the sample size
+n <- 2024
+# the proportion
+p <- x / n
+# estimated variance
+s2 <- p * (1 - p) / n
+# estimated standard error
+s <- sqrt(s2)
+s
 ###########################################################################
 ## Read data into R
 

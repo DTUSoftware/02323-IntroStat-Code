@@ -3,9 +3,8 @@
 # -----------------------------------------------------------------------------
 
 
-
 # How many "hits" you want / the value you want to hit
-x <- 0
+x <- 4
 # size is how many times you try / draw
 size <- 10
 # the probability of getting a hit
