@@ -22,9 +22,11 @@ k <- 5
 # Calculate the probability of 3 successes in a sample of 5 from a population of 10 with 4 successes
 dhyper(x, m, s - m, k)
 1 - dhyper(x, m, s - m, k)
+
 # phyper function can be used to calculate the cumulative probability of a certain number of successes or fewer.
 phyper(x, m, s - m, k)
 1 - phyper(x, m, s - m, k)
+
 # qhyper function can be used to calculate the number of successes at which a given cumulative probability occurs.
 qhyper(x, m, s - m, k)
 1 - qhyper(x, m, s - m, k)

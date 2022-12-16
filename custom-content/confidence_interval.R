@@ -4,7 +4,8 @@
 
 data <- c(22.3, 11.8, 14.8, 13.4, 14.8, 15.9, 6.6, 9.6, 16.5)
 conf_interval <- 99.9
-t.test(data, conf.level = conf_interval/100)
+alpha <- conf_interval/100
+t.test(data, conf.level = alpha)
 
 # To do it from the standard deviation, sample mean and sample size
 # n is sample size
@@ -16,6 +17,8 @@ s <- 467.9
 # the confidence interval thingy
 conf_interval <- 95
 alpha <- (100-conf_interval)/100
+
+# Calculate
 x - qt(1-alpha/2,n-1)*s/sqrt(n)
 x + qt(1-alpha/2,n-1)*s/sqrt(n)
 
