@@ -8,7 +8,7 @@ x <- 0
 size <- 10
 # the probability of getting a hit
 prob <- 0.03
-
+# remember that binomal doesn't "remove" options, and if you want the result to be above something use the 1-
 # The dbinom function is used to compute the probability mass function (PMF) of the binomial distribution,
 # which gives the probability that a random variable will take on a certain value.
 # In general, you should use the dbinom function if you want to compute the probability of a specific
