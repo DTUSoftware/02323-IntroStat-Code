@@ -44,10 +44,11 @@ qqline(fit$residuals)
 df <- 10
 n <- df+2
 s <- 0.0763
+p <- 1
 conf_interval <- 95
 alpha <- (100 - conf_interval) / 100
 1-alpha/2
-t <- qt(1 - alpha / 2, n - 2)     # T-value
+t <- qt(1 - alpha / 2, n - (p+1))     # T-value
 t
 
 # 3
