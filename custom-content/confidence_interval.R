@@ -11,7 +11,7 @@ t.test(data, conf.level = alpha)
 # n is sample size
 n <- 56
 # x is sample mean
-x <- 21.5
+x <- 6.461533
 # sample standard deviation is
 s <- 9.8
 # the confidence interval thingy
@@ -24,13 +24,15 @@ x + c(-1, 1) * qt(1 - alpha / 2, n - 1) * s / sqrt(n)
 
 # 1. Insert Variables
 
-n <- 0                         # Number of Observations
-x <- 0                         # Sample Mean
-s <- 0                         # Standard Deviation
+n <- 100000                         # Number of Observations
+x <- 0.06612                   # Sample Mean
+s <- 0.2571163                         # Standard Deviation
 
 # 2. Insert Variables
 
-alpha <- 0.05                   # Significane Value
+conf_interval <- 90
+alpha <- (100 - conf_interval) / 100
+# alpha <- 0.05                   # Significane Value
 t <- qt(1 - alpha / 2, n - 1)     # T-value
 
 # 3. Calculate Interval

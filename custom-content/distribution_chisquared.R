@@ -23,7 +23,7 @@ c(sqrt(df * s^2 / qchisq(alpha_1, df)), sqrt(df * s^2 / qchisq(alpha_2, df)))
 #  Insert values
 n1 <- 3
 n2 <- 2
-alpha <- 0.01
+alpha <- 0.05
 
 # Calculate values
 df2d <- (n1 - 1) * (n2 - 1)

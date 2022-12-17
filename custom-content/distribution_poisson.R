@@ -12,10 +12,10 @@
 
 # In a Poisson distribution, the parameter lambda (λ) represents the average number of events that occur in a given
 # interval of time or space. It is also known as the rate parameter or the expected value of the distribution.
-lambda <- 7 / 2
+lambda <- 1/15
 
 
-x <- 0
+x <- 1
 
 # remember to use 1 - pois if you want something above a certain value, for example when you want the chance that two
 # or more people is gonna visit a website then you set x to 1 because you want more than 1 person and then do the
@@ -39,4 +39,5 @@ qpois(x, lambda = lambda)
 1 - qpois(x, lambda = lambda)
 
 # rpois: This function generates random samples from the Poisson distribution.
-rpois(x, lambda = lambda)
+gen <- rpois(100000, lambda = lambda)
+sd(gen)
