@@ -9,13 +9,13 @@ t.test(data, conf.level = alpha)
 
 # To do it from the standard deviation, sample mean and sample size
 # n is sample size
-n <- 56
+n <- 1000
 # x is sample mean
-x <- 6.461533
+x <- 15
 # sample standard deviation is
-s <- 9.8
+s <- 1
 # the confidence interval thingy
-conf_interval <- 95
+conf_interval <- 90
 alpha <- (100 - conf_interval) / 100
 
 # Calculate

@@ -40,4 +40,5 @@ qpois(x, lambda = lambda)
 
 # rpois: This function generates random samples from the Poisson distribution.
 gen <- rpois(100000, lambda = lambda)
+quantile(gen,c(0.90))
 sd(gen)

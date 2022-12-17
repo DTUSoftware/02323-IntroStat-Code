@@ -56,7 +56,7 @@ t
 #   Question 5
 # -----------------------------------------------------------------------------
 
-# 4?
+# 4
 
 # -----------------------------------------------------------------------------
 #   Question 6
@@ -69,7 +69,7 @@ n <- df+1
 # x is sample mean
 x <- 6.461533
 # sample standard deviation is
-s <- 6
+s <- 0.845 # wtf where
 # the confidence interval thingy
 conf_interval <- 99
 alpha <- (100 - conf_interval) / 100
@@ -77,7 +77,7 @@ alpha <- (100 - conf_interval) / 100
 # Calculate
 x + c(-1, 1) * qt(1 - alpha / 2, n - 1) * s / sqrt(n)
 
-# 5?
+# 3 - 6.07 6.85
 
 # -----------------------------------------------------------------------------
 #   Question 7
@@ -117,7 +117,8 @@ t.test(log(range1), log(range2), paired = TRUE)
 
 # method 3.63
 ME <- 0.1
-n <- ((1.96*0.8)/ME)^2
+s <- 0.8
+n <- ((1.96*s)/ME)^2
 n
 # 4
 
@@ -160,8 +161,6 @@ prob <- 35 / 100
 
 # simulation
 
-# How many "hits" you want / the value you want to hit
-x <- 2
 # size is how many times you try / draw
 size <- 6
 # the probability of getting a hit (percent - 3% -> 0.03)
@@ -198,23 +197,42 @@ dpois(x, lambda = lambda)
 #   Question 15
 # -----------------------------------------------------------------------------
 
-# poisson
-bus_per_minute <- 1/15
-minutes <- 20
-# In a Poisson distribution, the parameter lambda (λ) represents the average number of events that occur in a given
-# interval of time or space. It is also known as the rate parameter or the expected value of the distribution.
-lambda <- 1/15
+# # poisson
+# bus_per_minute <- 1/15
+# minutes <- 20
+# # In a Poisson distribution, the parameter lambda (λ) represents the average number of events that occur in a given
+# # interval of time or space. It is also known as the rate parameter or the expected value of the distribution.
+# lambda <- 1/15*60
+#
+# x <- 90
+#
+# # ppois: This function calculates the cumulative distribution function (CDF) of the Poisson
+# # distribution at a given point. The CDF gives the probability of observing a value less than
+# # or equal to a given point.
+# qpois(x, lambda = lambda)
+# 1 - qpois(x, lambda = lambda)
+#
+# n <- 10
+# # Simulate
+# x <- rexp(n, rate = 1/15)
+# # Plot the empirical pdf
+# plot(table(x)/n)
+# # Add the pdf to the plot
+# lines(0:20, dpois(0:20,lambda), type="h", col="red")
+#
+#
+# gen <- dnorm(1, 15)
+# hist(gen)
 
-x <- 90
+# ------------------------
 
-# ppois: This function calculates the cumulative distribution function (CDF) of the Poisson
-# distribution at a given point. The CDF gives the probability of observing a value less than
-# or equal to a given point.
-qpois(x, lambda = lambda)
-1 - qpois(x, lambda = lambda)
+rate <- 1/15
+x <- 0.9
+# qexp is the inverse cumulative distribution function (ICDF) of the exponential distribution. It calculates the value
+# at which a given probability occurs in the exponential distribution.
+qexp(x, rate = rate)
 
-
-# fuck
+# 3 - 34.53
 
 # -----------------------------------------------------------------------------
 #   Question 16
@@ -227,7 +245,9 @@ runif(50, 0, 100)
 #   Question 17
 # -----------------------------------------------------------------------------
 
-2*(1 - pt(q=0.371, df=10))
+df <- 10
+q <- 0.371
+2*(1 - pt(q=q, df=df))
 # 4 - 0.7184
 
 # -----------------------------------------------------------------------------
@@ -244,7 +264,7 @@ n
 #   Question 19
 # -----------------------------------------------------------------------------
 
-# 2?
+# 1 - p < 0.5 (sign diff)
 
 # -----------------------------------------------------------------------------
 #   Question 20
@@ -253,7 +273,7 @@ n
 simsamples <- replicate(10000, sample(glutenA, replace = FALSE)) # FALSE?
 simmeans <- apply(simsamples, 2, mean)
 quantile(simmeans, c(0.025, 0.975))
-# 2 (or 1 if mean?)
+# 4
 
 # -----------------------------------------------------------------------------
 #   Question 21
@@ -283,7 +303,9 @@ quantile(simsds, c(0.025, 0.975))
 
 n <- 1268
 p <- (852)/n
-p + c(-1, 1) * sqrt(p * (1 - p) / n) * qnorm(0.975)
+conf_interval <- 95
+alpha <- (100 - conf_interval) / 100
+p + c(-1, 1) * sqrt(p * (1 - p) / n) * qnorm(1 - alpha / 2)
 # 4 -  0.6460817 0.6977669
 
 # -----------------------------------------------------------------------------
@@ -296,7 +318,9 @@ n1 <- 852
 n2 <- 416
 p1 <- 746/n1
 p2 <- 339/n2
-p1-p2 + c(-1,1) * sqrt(p1*(1-p1)/n1+p2*(1-p2)/n2)*qnorm(0.975)
+conf_interval <- 95
+alpha <- (100 - conf_interval) / 100
+p1-p2 + c(-1,1) * sqrt(p1*(1-p1)/n1+p2*(1-p2)/n2)*qnorm(1 - alpha / 2)
 
 # 3 - 0.01727775 0.10408826
 

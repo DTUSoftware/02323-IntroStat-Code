@@ -9,9 +9,9 @@
 # 1000 would be the quantile value you give and it would return and say 43% are
 # rated higher than 1000.
 
-x <- 0       # Mean
-s <- 0       # Standard Deviation
-q <- 0       # Quantile to check for
+x <- 15       # Mean
+s <- 1       # Standard Deviation
+q <- 90       # Quantile to check for
 
 # What percent of the population has a higher value? (q < population)
 pnorm(q, x, s)
@@ -19,10 +19,13 @@ pnorm(q, x, s)
 # What percent of the population has a lower value? (q > population)
 1 - pnorm(q, x, s)
 
+
 # ROBOT OVERLORD
 
 # Generate normal random variables
-normal_data <- rnorm(n = 100, mean = 0, sd = 1)
+normal_data <- rnorm(n = 10000, mean = x, sd = s)
+quantile(normal_data, 0.91)
+hist(normal_data)
 
 # Summarize the normal data
 summary(normal_data)

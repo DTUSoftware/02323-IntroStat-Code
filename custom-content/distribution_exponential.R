@@ -15,7 +15,7 @@
 # whatever you want
 x <- 90
 # The rate (percent - 3% -> 0.03) - if you have a time of 3 years (mean), you need the inverse of the mean = 1/3
-rate <- 1 / 15
+rate <- 15
 
 # dexp is the density function of the exponential distribution. It calculates the probability density of a given value,
 # given the parameters of the distribution.
